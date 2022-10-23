@@ -1,0 +1,62 @@
+baseURL = 'https://yuchsieh.com/'
+
+theme = "loveit"
+
+title = 'Yucheng Hsieh'
+
+languageCode = 'en-us'
+languageName = 'English'
+hasCJKLanguage = true
+
+# Author config
+[author]
+  name = "Yucheng Hsieh"
+  email = "stjobiwtc@gmail.com"
+  link = "https://yuchsieh.com/"
+
+# Menu config
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+  [[menu.main]]
+    weight = 3
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+  [[menu.main]]
+    weight = 4
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+
+# Customized parameters
+[params]
+    defaultTheme = "dark"
+    title = "Yucheng Hsieh"
+    description = "Welcome to my page"
+    [params.header]
+        [params.header.title]
+            name = "Yucheng Hsieh"
+    [params.home]
+        [params.home.profile]
+            avatarURL = "/images/profile.jpg"
+            subtitle = "Welcome to Yucheng Hsieh's Personal Site"
+    [params.social]
+        GitHub = "Yucheng7713"
+        Linkedin = "yucheng-steven-hsieh-312082122"
+        Email = "stjobiwtc@gmail.com"
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
