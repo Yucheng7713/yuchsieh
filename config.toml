@@ -19,8 +19,11 @@ hasCJKLanguage = true
   [[menu.main]]
     weight = 1
     identifier = "posts"
+    pre = ""
+    post = ""
     name = "Posts"
     url = "/posts/"
+    title = ""
   [[menu.main]]
     weight = 2
     identifier = "tags"
@@ -34,9 +37,11 @@ hasCJKLanguage = true
   [[menu.main]]
     weight = 4
     identifier = "about"
+    pre = ""
+    post = ""
     name = "About"
-    url = "/about/"
-
+    url = "/about/me/"
+    title = ""
 # Customized parameters
 [params]
     defaultTheme = "dark"
