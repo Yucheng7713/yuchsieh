@@ -34,6 +34,10 @@ featuredImagePreview: "post_1_cover.png"
 
 &nbsp;
 
+Disclamer : 本文撰寫的時間點為 2022/10/28，文中所分享的內容連結與方法有可能隨時間推移更新而有所不同。
+
+&nbsp;
+
 在架設平台上則選擇了自己較為熟悉的 AWS，這邊架站所需要用到的功能基本上全都選擇用 AWS 上所提供的服務 (沒錯我懶XD )：
 
 
@@ -206,3 +210,29 @@ ACM 申請到的憑證。
 &nbsp;
 
 ### Github Action
+
+這邊我選擇將只個網頁專案都上傳到 Github 做版控，比起每次都需要重新登入 AWS 或透過 awscli 來上傳內容到 S3，更懶的作法是每次有推新的 commit 時就自動上傳最新
+的網頁內容。[Github Actio](https://github.com/marketplace?type=actions) 有豐富的 action 讓開發者根據需求來建置 CI/CD 流程。
+在每次 push commit 後，要執行的步驟有：
+
+- 自動生成靜態網頁內容 - 執行 `hugo` command。使用action : [Hugo Setup](https://github.com/marketplace/actions/hugo-setup) 用來建置 Hugo 執行環境
+- 將生成的內容上傳到 S3 bucket。 使用action : [Configure AWS Credentials](https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions)
+
+
+這邊附上我超簡陋的 YAML 當參考：https://github.com/Yucheng7713/yuchsieh/blob/master/.github/workflows/deploy.yml
+
+如果去 Marketplace 晃一圈應該會發現同一件事有很多不同的 Action 可以達成，選自己喜歡合適的就好
+!! 如果是跟 AWS 連動的 action 很多都需要把 credentials 加到 repo 去，需要特別注意。
+
+&nbsp;
+
+### 後記
+
+架站方式千千百百種，文中所記載的方式不見得是很完善的方式。如果你也是建站初心者，同時也對雲端平台有興趣的話蠻推薦透過這樣的方式來得到一些些經驗。
+以下是我有參考的內容來源：
+
+- [Tutorial: Configuring a static website using a custom domain registered with Route 53](https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html#root-domain-walkthrough-configure-redirect)
+- [How to Host a Website on Amazon Web Services (AWS) - S3, Route 53, CloudFront, & Certificate Manager](https://www.youtube.com/watch?v=lCnymxddies&ab_channel=Websplaining)
+- [Configuring Amazon Route 53 to route traffic to a CloudFront distribution](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html#routing-to-cloudfront-distribution-config)
+- [How do I use CloudFront to serve HTTPS requests for my Amazon S3 bucket?](https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/)
+
