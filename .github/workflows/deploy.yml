@@ -13,7 +13,8 @@ jobs:
       - name: Set up hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: '0.108.0'
+          extended: true
       - name: Build
         run: hugo --minify
       - name: Upload to S3 bucket
