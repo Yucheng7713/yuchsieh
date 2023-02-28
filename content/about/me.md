@@ -18,7 +18,6 @@ ___
 - Tech stack : Jenkins, Spinnaker, Istio, K8s, React, Redux, 
 - PLs : Javascript, Shell script, Groovy
 - CI/CD maintenance and enhancement - Github Action, Jenkins & Spinnaker.
-- Enable multi-arch building support to CI image flow.
 - Routine work : system trouble shooting, micro service migration.
 - Maintain and develop internal build and deploy platform with React Redux.
 
