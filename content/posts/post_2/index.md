@@ -1,6 +1,6 @@
 ---
-title: "Post_2_JSLearning"
-date: 2023-01-07T23:16:55+08:00
+title: "Javascript，ECMAScript，ES6的歷史糾葛"
+date: 2022-08-19T22:22:20+08:00
 draft: true
 ---
 
