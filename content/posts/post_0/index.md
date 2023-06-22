@@ -2,7 +2,11 @@
 title: "2022 上半年軟體求職心路歷程紀錄"
 date: 2022-08-19T22:22:20+08:00
 draft: false
+featuredImagePreview: "post_0_cover.png"
 ---
+{{< figure src="post_0_cover.png" >}}
+
+&nbsp;
 
 本文為 2022 上半年的軟體職缺求職心得分享．
 
